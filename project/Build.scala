@@ -4,7 +4,6 @@ import play.Project._
 import com.tuplejump.sbt.yeoman.Yeoman
 
 object ApplicationBuild extends Build {
-
   val appName         = "PlayYeomanHeroku"
   val appVersion      = "1.0-SNAPSHOT"
 
@@ -14,10 +13,8 @@ object ApplicationBuild extends Build {
     anorm
   )
 
-
   val main = play.Project(appName, appVersion, appDependencies).settings(
-    // Add your own project settings here      
-	Yeoman.yeomanSettings : _*
+    // Add your own project settings here
+    Yeoman.yeomanSettings : _*
   )
-
 }
